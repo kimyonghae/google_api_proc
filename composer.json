@@ -4,9 +4,7 @@
     "require": {
         "google/apiclient": "2.0"
     },
-    "require-dev": {
-        "google/apiclient": "2.0"
-    },
+    "require-dev": {},
     "authors": [
         {
             "name": "yong",
