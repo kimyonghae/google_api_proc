@@ -1,0 +1,22 @@
+{
+    "name": "dev1234yong/google_api_proc",
+    "description": "google api mail and user manager",
+    "require": {
+        "google/apiclient": "2.0"
+    },
+    "require-dev": {
+        "google/apiclient": "2.0"
+    },
+    "authors": [
+        {
+            "name": "yong",
+            "email": "dev1234yong@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4" : {
+            "GoogleApiProc\\" : "src/"
+        }
+    }
+}
