@@ -3,7 +3,7 @@
     "description": "google api mail and user manager",
     "require": {
         "google/apiclient": "^2.0",
-        "illuminate/support": "^5.4.*",
+        "illuminate/support": "5.7.*",
         "swiftmailer/swiftmailer": "^5.4"
     },
     "require-dev": {},
