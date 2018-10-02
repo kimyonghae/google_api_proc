@@ -2,7 +2,9 @@
     "name": "dev1234yong/google_api_proc",
     "description": "google api mail and user manager",
     "require": {
-        "google/apiclient": "^2.0"
+        "google/apiclient": "^2.0",
+        "illuminate/support": "5.0.*|5.1.*|5.2.*|5.3.*|5.4.*",
+        "swiftmailer/swiftmailer": "^5.4"
     },
     "require-dev": {},
     "authors": [
