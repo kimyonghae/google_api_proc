@@ -29,13 +29,13 @@ class GSuiteAdmin
             $client = new Google_Client();
             $client->setApplicationName('G Suite Directory API PHP Quickstart');
             $client->setScopes(Google_Service_Directory::ADMIN_DIRECTORY_USER);
-            $credentials = env('GSUITE_CREDENTIALS');
+            $credentials = Config::get('credentials.GSUITE_CREDENTIALS');
             $client->setAuthConfig($credentials);
             $client->setAccessType('offline');
             $client->setPrompt('select_account consent');
 
             // Load previously authorized credentials from a file.
-            $credentialsPath = env('GSUITE_TOKEN');
+            $credentialsPath = Config::get('credentials.GSUITE_TOKEN');
             if (file_exists($credentialsPath)) {
                 $accessToken = json_decode(file_get_contents($credentialsPath), true);
             } else {

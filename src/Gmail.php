@@ -1,6 +1,7 @@
 <?php
 namespace GoogleApiProc;
 
+use Config;
 use Google_Client;
 use Google_Service_Gmail;
 /**
@@ -24,11 +25,11 @@ class Gmail
             $client->setApplicationName('Gmail API PHP Quickstart');
             $client->setScopes(Google_Service_Gmail::MAIL_GOOGLE_COM);
             $client->setAccessType('offline');
-            $credentials = env('GMAIL_CREDENTIALS');
+            $credentials = Config::get('credentials.GMAIL_CREDENTIALS');
             $client->setAuthConfig($credentials);
 
             // Load previously authorized credentials from a file.
-            $credentialsPath = env('GMAIL_TOKEN');
+            $credentialsPath = Config::get('credentials.GMAIL_TOKEN');
             if (file_exists($credentialsPath)) {
                 $accessToken = json_decode(file_get_contents($credentialsPath), true);
             } else {
